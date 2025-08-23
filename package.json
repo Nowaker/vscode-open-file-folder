@@ -1,94 +1,97 @@
 {
-	"name": "vscode-open-file-folder",
-	"displayName": "Open a file's folder as Workspace in VS Code",
-	"description": "Open a file's folder as Workspace in VS Code",
-	"version": "0.0.4",
-	"author": "Damian Nowak",
-	"publisher": "nowaker",
-	"galleryBanner": {
-		"color": "#37699A",
-		"theme": "dark"
-	},
-	"homepage": "https://github.com/Nowaker/vscode-open-file-folder/blob/master/README.md",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/Nowaker/vscode-open-file-folder.git"
-	},
-	"bugs": {
-		"url": "https://github.com/Nowaker/vscode-open-file-folder/issues"
-	},
-	"engines": {
-		"vscode": "^1.74.0"
-	},
-	"license": "MIT",
-	"categories": [
-		"Other"
-	],
-	"activationEvents": [
-		"*"
-	],
-	"main": "./out/extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
-				"title": "Open file's folder as workspace"
-			},
-			{
-				"command": "vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace",
-				"title": "Open file's realpath folder as workspace"
-			},
-			{
-				"command": "vscode-open-file-folder.openFolderAsWorkspace",
-				"title": "Open folder as workspace"
-			}
-		],
-		"menus": {
-			"editor/title": [
-				{
-					"command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
-					"group": "openFileFolder"
-				}
-			],
-			"editor/title/context": [
-				{
-					"command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
-					"group": "openFileFolder"
-				}
-			],
-			"explorer/context": [
-				{
-					"command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
-					"when": "!explorerResourceIsFolder",
-					"group": "navigation@2"
-				},
-				{
-					"command": "vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace",
-					"when": "!explorerResourceIsFolder",
-					"group": "navigation@2"
-				},
-				{
-					"command": "vscode-open-file-folder.openFolderAsWorkspace",
-					"when": "explorerResourceIsFolder",
-					"group": "navigation@2"
-				}
-			]
-		}
-	},
-	"scripts": {
-		"test": "node ./out/test/runTest.js",
-		"pretest": "npm run compile-tests",
-		"compile": "tsc -p ./",
-		"compile-tests": "tsc -p ./ --outDir out"
-	},
-	"devDependencies": {
-		"@types/vscode": "^1.74.0",
-		"@types/node": "16.x",
-		"@types/mocha": "^10.0.1",
-		"@types/glob": "^8.1.0",
-		"@vscode/test-electron": "^2.3.4",
-		"glob": "^8.1.0",
-		"mocha": "^10.2.0",
-		"typescript": "^5.1.6"
-	}
+  "name": "vscode-open-file-folder",
+  "displayName": "Open a file's folder as Workspace in VS Code",
+  "description": "Open a file's folder as Workspace in VS Code",
+  "version": "0.0.4",
+  "author": "Damian Nowak",
+  "publisher": "nowaker",
+  "galleryBanner": {
+    "color": "#37699A",
+    "theme": "dark"
+  },
+  "homepage": "https://github.com/Nowaker/vscode-open-file-folder/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nowaker/vscode-open-file-folder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nowaker/vscode-open-file-folder/issues"
+  },
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "license": "MIT",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+        "title": "Open file's folder as workspace"
+      },
+      {
+        "command": "vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace",
+        "title": "Open file's realpath folder as workspace"
+      },
+      {
+        "command": "vscode-open-file-folder.openFolderAsWorkspace",
+        "title": "Open folder as workspace"
+      }
+    ],
+    "menus": {
+      "editor/title": [
+        {
+          "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+          "group": "openFileFolder"
+        }
+      ],
+      "editor/title/context": [
+        {
+          "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+          "group": "openFileFolder"
+        }
+      ],
+      "explorer/context": [
+        {
+          "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+          "when": "!explorerResourceIsFolder",
+          "group": "navigation@2"
+        },
+        {
+          "command": "vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace",
+          "when": "!explorerResourceIsFolder",
+          "group": "navigation@2"
+        },
+        {
+          "command": "vscode-open-file-folder.openFolderAsWorkspace",
+          "when": "explorerResourceIsFolder",
+          "group": "navigation@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "test": "node ./out/test/runTest.js",
+    "pretest": "npm run compile-tests",
+    "compile": "tsc -p ./",
+    "compile-tests": "tsc -p ./ --outDir out",
+    "format": "prettier --write \"src/**/*.ts\" \"*.json\" \".vscode/*.json\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"*.json\" \".vscode/*.json\""
+  },
+  "devDependencies": {
+    "@types/glob": "^8.1.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.74.0",
+    "@vscode/test-electron": "^2.3.4",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "prettier": "^3.6.2",
+    "typescript": "^5.1.6"
+  }
 }
