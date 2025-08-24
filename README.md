@@ -1,4 +1,4 @@
-# vscode-open-file-folder
+# vscode-open-folder-or-file-folder-as-workspace
 
 VS Code extension that adds intelligent context menu options to open files and folders as workspaces in new VS Code windows.
 
