@@ -4,7 +4,7 @@
   "description": "Open a file's folder as Workspace in VS Code",
   "version": "0.0.4",
   "author": "Damian Nowak",
-  "publisher": "nowaker",
+  "publisher": "Nowaker",
   "galleryBanner": {
     "color": "#37699A",
     "theme": "dark"
