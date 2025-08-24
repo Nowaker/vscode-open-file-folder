@@ -1,7 +1,7 @@
 {
-  "name": "vscode-open-file-folder",
-  "displayName": "Open a file's folder as Workspace in VS Code",
-  "description": "Open a file's folder as Workspace in VS Code",
+  "name": "vscode-open-folder-or-file-folder-as-workspace",
+  "displayName": "Open folder or file's folder as workspace in VS Code",
+  "description": "Open folder or file's folder as workspace in VS Code.",
   "version": "20250823.0.0",
   "author": "Damian Nowak",
   "publisher": "Nowaker",
@@ -9,13 +9,13 @@
     "color": "#37699A",
     "theme": "dark"
   },
-  "homepage": "https://github.com/Nowaker/vscode-open-file-folder/blob/master-fork/README.md",
+  "homepage": "https://github.com/Nowaker/vscode-open-folder-or-file-folder-as-workspace/blob/master-fork/README.md",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nowaker/vscode-open-file-folder.git"
+    "url": "https://github.com/Nowaker/vscode-open-folder-or-file-folder-as-workspace.git"
   },
   "bugs": {
-    "url": "https://github.com/Nowaker/vscode-open-file-folder/issues"
+    "url": "https://github.com/Nowaker/vscode-open-folder-or-file-folder-as-workspace/issues"
   },
   "engines": {
     "vscode": "^1.74.0"
@@ -31,44 +31,44 @@
   "contributes": {
     "commands": [
       {
-        "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+        "command": "vscode-open-folder-or-file-folder-as-workspace.openFileParentFolderAsWorkspace",
         "title": "Open file's folder as workspace"
       },
       {
-        "command": "vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace",
+        "command": "vscode-open-folder-or-file-folder-as-workspace.openFileRealpathParentFolderAsWorkspace",
         "title": "Open file's realpath folder as workspace"
       },
       {
-        "command": "vscode-open-file-folder.openFolderAsWorkspace",
+        "command": "vscode-open-folder-or-file-folder-as-workspace.openFolderAsWorkspace",
         "title": "Open folder as workspace"
       }
     ],
     "menus": {
       "editor/title": [
         {
-          "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+          "command": "vscode-open-folder-or-file-folder-as-workspace.openFileParentFolderAsWorkspace",
           "group": "openFileFolder"
         }
       ],
       "editor/title/context": [
         {
-          "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+          "command": "vscode-open-folder-or-file-folder-as-workspace.openFileParentFolderAsWorkspace",
           "group": "openFileFolder"
         }
       ],
       "explorer/context": [
         {
-          "command": "vscode-open-file-folder.openFileParentFolderAsWorkspace",
+          "command": "vscode-open-folder-or-file-folder-as-workspace.openFileParentFolderAsWorkspace",
           "when": "!explorerResourceIsFolder",
           "group": "navigation@2"
         },
         {
-          "command": "vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace",
+          "command": "vscode-open-folder-or-file-folder-as-workspace.openFileRealpathParentFolderAsWorkspace",
           "when": "!explorerResourceIsFolder",
           "group": "navigation@2"
         },
         {
-          "command": "vscode-open-file-folder.openFolderAsWorkspace",
+          "command": "vscode-open-folder-or-file-folder-as-workspace.openFolderAsWorkspace",
           "when": "explorerResourceIsFolder",
           "group": "navigation@2"
         }

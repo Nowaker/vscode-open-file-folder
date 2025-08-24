@@ -112,15 +112,15 @@ suite('Extension Test Suite', () => {
     const commands = await vscode.commands.getCommands(true);
 
     assert.ok(
-      commands.includes('vscode-open-file-folder.openFileParentFolderAsWorkspace'),
+      commands.includes('vscode-open-folder-or-file-folder-as-workspace.openFileParentFolderAsWorkspace'),
       'openFileParentFolderAsWorkspace command should be registered'
     );
     assert.ok(
-      commands.includes('vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace'),
+      commands.includes('vscode-open-folder-or-file-folder-as-workspace.openFileRealpathParentFolderAsWorkspace'),
       'openFileRealpathParentFolderAsWorkspace command should be registered'
     );
     assert.ok(
-      commands.includes('vscode-open-file-folder.openFolderAsWorkspace'),
+      commands.includes('vscode-open-folder-or-file-folder-as-workspace.openFolderAsWorkspace'),
       'openFolderAsWorkspace command should be registered'
     );
   });

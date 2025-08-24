@@ -1,0 +1,13 @@
+.vscode-test/**
+.gitignore
+.prettierignore
+.prettierrc
+.editorconfig
+.ruby-lsp/**
+src/**
+.vscode/launch.json
+.vscode/settings.json
+tsconfig.json
+**/*.map
+**/test/**
+**/*.test.*

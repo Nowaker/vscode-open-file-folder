@@ -88,7 +88,7 @@ export async function openRealpathDirectory(inputPath: string): Promise<string> 
 export function activate(context: vscode.ExtensionContext) {
   // Command for opening file's symlink directory as workspace (symlink's parent, not target's parent)
   const openFileCommand = vscode.commands.registerCommand(
-    'vscode-open-file-folder.openFileParentFolderAsWorkspace',
+    'vscode-open-folder-or-file-folder-as-workspace.openFileParentFolderAsWorkspace',
     async (resourceUri: vscode.Uri) => {
       try {
         const targetFolder = await openSymlinkDirectory(resourceUri.fsPath);
@@ -102,7 +102,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Command for opening file's realpath directory as workspace
   const openFileRealpathCommand = vscode.commands.registerCommand(
-    'vscode-open-file-folder.openFileRealpathParentFolderAsWorkspace',
+    'vscode-open-folder-or-file-folder-as-workspace.openFileRealpathParentFolderAsWorkspace',
     async (resourceUri: vscode.Uri) => {
       try {
         const targetFolder = await openRealpathDirectory(resourceUri.fsPath);
@@ -116,7 +116,7 @@ export function activate(context: vscode.ExtensionContext) {
 
   // Command for opening folder as workspace (same logic, but different context)
   const openFolderCommand = vscode.commands.registerCommand(
-    'vscode-open-file-folder.openFolderAsWorkspace',
+    'vscode-open-folder-or-file-folder-as-workspace.openFolderAsWorkspace',
     async (resourceUri: vscode.Uri) => {
       try {
         const targetFolder = await resolveTargetFolder(resourceUri.fsPath);
