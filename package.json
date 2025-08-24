@@ -2,7 +2,7 @@
   "name": "vscode-open-file-folder",
   "displayName": "Open a file's folder as Workspace in VS Code",
   "description": "Open a file's folder as Workspace in VS Code",
-  "version": "0.0.4",
+  "version": "20250823.0.0",
   "author": "Damian Nowak",
   "publisher": "Nowaker",
   "galleryBanner": {
